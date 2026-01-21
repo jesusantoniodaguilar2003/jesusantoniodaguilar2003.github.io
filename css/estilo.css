@@ -1,0 +1,490 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIABLES ===== */
+:root {
+  --bg-dark: #020617;
+  --bg-light: #f8fafc;
+  --bg-section: #f1f5f9;
+  --primary: #2563eb;
+  --secondary: #1e40af;
+  --accent: #38bdf8;
+  --text-dark: #0f172a;
+  --text-light: #e5e7eb;
+  --card-bg: #ffffff;
+  --radius: 16px;
+}
+
+/* ===== HTML & BODY ===== */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.7;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(2, 6, 23, 0.95);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 10%;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 95vh;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(30,64,175,0.92),
+      rgba(37,99,235,0.92)
+    ),
+    url("../img/hero-ti.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.hero p {
+  max-width: 650px;
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+
+/* ===== MAIN ===== */
+main {
+  flex: 1;
+}
+
+/* ===== SECCIONES ===== */
+.container {
+  padding: 80px 10%;
+  max-width: 1200px;
+  margin: 40px auto;
+  border-radius: 24px;
+}
+
+.container:nth-of-type(even) {
+  background: var(--bg-section);
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--secondary);
+}
+
+.container h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: var(--card-bg);
+  padding: 35px;
+  border-radius: var(--radius);
+  margin-bottom: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+}
+
+.card span {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* ===== LISTAS ===== */
+ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* ===== BOTONES ===== */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 12px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 10px 25px rgba(37,99,235,0.35);
+}
+
+.btn:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.grid span {
+  background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+  padding: 18px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid span:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  text-align: center;
+  padding: 25px;
+}
+
+/* ===== ANIMACIONES ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .container {
+    padding: 60px 7%;
+  }
+}
+
+/* PERFIL */
+.perfil-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 60px 80px;
+  max-width: 1100px;
+  margin: auto;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.perfil-title {
+  font-size: 2.2rem;
+  color: var(--secondary);
+  margin-bottom: 35px;
+}
+
+/* IMAGEN */
+.perfil-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.perfil-img img {
+  width: 260px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* TEXTO */
+.perfil-text {
+  text-align: left;
+  max-width: 900px;
+  margin: auto;
+}
+
+.perfil-text p {
+  margin-bottom: 18px;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .perfil-card {
+    padding: 40px 25px;
+  }
+
+  .perfil-img img {
+    width: 220px;
+  }
+
+  .perfil-text {
+    text-align: left;
+  }
+}
+
+/* ===== SKILLS ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.skill-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 160px; /* 🔒 altura fija */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-card h4 {
+  font-size: 1.05rem;
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+/* OVERLAY */
+.skill-card p {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 64, 175, 0.95),
+    rgba(37, 99, 235, 0.95)
+  );
+  color: #ffffff;
+  padding: 20px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+/* HOVER */
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+}
+
+.skill-card:hover p {
+  opacity: 1;
+}
+
+/* ===== CONTACTO ===== */
+.contact-section {
+  text-align: center;
+}
+
+.contact-intro {
+  max-width: 650px;
+  margin: 0 auto 50px;
+  font-size: 1rem;
+  color: #475569;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.contact-card {
+  background: var(--card-bg);
+  padding: 35px 25px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.12);
+}
+
+.contact-card .icon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.contact-card h4 {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  word-break: break-word;
+}
+
+.contact-card .note {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Botón pequeño */
+.btn.small {
+  padding: 10px 22px;
+  font-size: 0.85rem;
+}
+
+/* ===== EDUCACIÓN ===== */
+.edu-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.edu-logo {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ===== CURSOS ===== */
+.course-card h4 {
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 15px;
+}
+
+/* ===== RECONOCIMIENTOS ===== */
+.recognition-card {
+  position: relative;
+  padding: 80px 30px 30px;
+}
+
+.recognition-card h4 {
+  margin-top: 15px;
+  color: var(--secondary);
+}
+
+.recognition-type {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.recognition-card p {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.8rem;
+}
+
+.recognition-card .btn {
+  margin-top: 15px;
+}
