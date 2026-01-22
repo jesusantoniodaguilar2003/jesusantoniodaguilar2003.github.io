@@ -35,3 +35,45 @@ document.addEventListener("DOMContentLoaded", () => {
     el.classList.add("show");
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("JS cargado correctamente");
+
+  const prevBtn = document.querySelector(".carousel-btn.prev");
+  const nextBtn = document.querySelector(".carousel-btn.next");
+
+  prevBtn.addEventListener("click", () => console.log("CLICK prev"));
+  nextBtn.addEventListener("click", () => console.log("CLICK next"));
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector(".experience-carousel");
+  const track = carousel.querySelector(".carousel-track");
+  const slides = carousel.querySelectorAll(".carousel-slide");
+  const prevBtn = carousel.querySelector(".carousel-btn.prev");
+  const nextBtn = carousel.querySelector(".carousel-btn.next");
+
+  let index = 0;
+
+  function updateCarousel() {
+    const slideWidth = carousel.clientWidth;
+    console.log("slideWidth:", slideWidth, "index:", index);
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+
+  updateCarousel();
+});
+
+
+

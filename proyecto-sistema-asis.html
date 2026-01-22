@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Control de Ingreso y Asistencia</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+<main>
+<nav class="navbar">
+  <div class="logo">JA</div>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="perfil.html">Perfil</a></li>
+    <li><a href="habilidades.html">Habilidades</a></li>
+    <li><a href="educacion.html">Educación</a></li>
+    <li><a href="experiencia.html">Experiencia</a></li>
+    <li><a href="proyectos.html" class="active">Proyectos</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+<section class="container fade-in">
+  <h2>Sistema de Control de Ingreso y Asistencia</h2>
+
+  <p><strong>Proyecto:</strong> Sistema de Control de Ingreso y Asistencia</p>
+  <p><strong>Institución:</strong> Instituto Tecnológico Superior de Pánuco</p>
+
+  <p>
+    Este sistema fue desarrollado como solución integral para el control de acceso y asistencia en instalaciones educativas. El objetivo principal fue automatizar el registro de entradas y salidas, reducir el uso de métodos manuales y generar reportes confiables y en tiempo real.
+  </p>
+
+  <ul class="project-list">
+    <li><strong>Contexto y necesidad:</strong> En muchas instituciones el control de asistencia se realiza de forma manual o mediante sistemas básicos. Este proyecto automatiza el registro, mejora la seguridad y permite análisis por carrera o alumno.</li>
+
+    <li><strong>Funcionalidades principales:</strong>
+      <ul class="sub-list">
+        <li>Dashboard central para visualizar accesos y asistencia.</li>
+        <li>Registro automático de entradas y salidas mediante QR.</li>
+        <li>Generación de reportes PDF con TCPDF.</li>
+        <li>Control de acceso físico mediante Arduino.</li>
+        <li>Gestión de usuarios con permisos y roles.</li>
+        <li>Base de datos normalizada en MySQL.</li>
+      </ul>
+    </li>
+
+    <li><strong>Arquitectura del sistema:</strong> El sistema cuenta con una capa web (front-end + back-end) conectada a MySQL, y una capa física con Arduino para el control de acceso. La arquitectura se diseñó pensando en escalabilidad y seguridad.</li>
+
+    <li><strong>Proceso de desarrollo:</strong>
+      <ul class="sub-list">
+        <li>Análisis de requisitos y definición de necesidades.</li>
+        <li>Diseño y normalización de base de datos en MySQL.</li>
+        <li>Desarrollo de interfaz web con HTML, CSS y JavaScript.</li>
+        <li>Integración con Arduino y dispositivos de acceso.</li>
+        <li>Generación de QR para registro desde estacionamiento.</li>
+        <li>Pruebas en entorno real y validación de datos.</li>
+      </ul>
+    </li>
+
+    <li><strong>Resultados:</strong> Automatización del control de acceso, reducción de errores manuales y generación de reportes precisos. El dashboard permite análisis rápido por carrera o alumno.</li>
+
+    <li><strong>Tecnologías utilizadas:</strong>
+      <ul class="sub-list">
+        <li>HTML / CSS / JavaScript</li>
+        <li>PHP (backend)</li>
+        <li>MySQL</li>
+        <li>TCPDF (PDF)</li>
+        <li>Arduino</li>
+        <li>Cableado de red y montaje de servidor</li>
+      </ul>
+    </li>
+  </ul>
+
+    <!-- CAPTURAS -->
+    <div class="project-images">
+      <h3>Capturas del sistema</h3>
+
+    <div class="image-row">
+        <img src="img/Login.png" alt="Login">
+        <img src="img/Menu.png" alt="Menu">
+      </div>
+
+      <div class="image-row">
+        <img src="img/RAl.png" alt="Registro alumno">
+        <img src="img/RT.png" alt="Registro tarjeta">
+      </div>
+
+      <div class="image-row">
+        <img src="img/GR.png" alt="Generador de Reportes">
+        <img src="img/RP.png" alt="Reportes en PDF">
+      </div>
+
+      <div class="image-row">
+        <img src="img/DAS.png" alt="Dashboard del sistema">
+        <img src="img/CS.png" alt="Reportes en PDF">
+      </div>
+
+      <div class="image-row">
+        <img src="img/ES.png" alt="Generación de QR">
+      </div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer>© 2026 · Jesus Antonio Del Angel Aguilar</footer>
+</body>
+</html>

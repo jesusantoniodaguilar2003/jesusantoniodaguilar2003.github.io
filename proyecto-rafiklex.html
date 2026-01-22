@@ -16,7 +16,7 @@
     <li><a href="habilidades.html">Habilidades</a></li>
     <li><a href="educacion.html">Educación</a></li>
     <li><a href="experiencia.html">Experiencia</a></li>
-    <li><a href="proyectos.html">Proyectos</a></li>
+    <li><a href="proyectos.html" class="active">Proyectos</a></li>
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
 </nav>
@@ -24,25 +24,68 @@
 <section class="container fade-in">
   <h2>Rafiklex – Inteligencia Artificial Legal</h2>
 
-  <p>
-    Proyecto de inteligencia artificial enfocado en el procesamiento de lenguaje natural
-    para análisis semántico, estructuración y generación asistida de contratos jurídicos.
-  </p>
+  <div class="project-grid">
 
-  <h3>Tecnologías</h3>
-  <ul>
-    <li>PLN</li>
-    <li>Modelos LLM locales</li>
-    <li>Ollama</li>
-    <li>Entorno Devapp</li>
-  </ul>
+    <!-- DESCRIPCIÓN -->
+    <div class="project-card">
+      <h3>Descripción</h3>
+      <p>
+        Proyecto de inteligencia artificial enfocado en el procesamiento de lenguaje natural
+        para análisis semántico, estructuración y generación asistida de contratos jurídicos.
+        La solución está diseñada para ayudar a profesionales legales a generar documentos
+        con mayor rapidez y precisión, mediante sugerencias y validaciones automáticas.
+      </p>
+    </div>
 
-  <h3>Alcance</h3>
-  <p>
-    Prototipo funcional autónomo para pruebas controladas, sin despliegue en producción.
-  </p>
+    <!-- ALCANCE -->
+    <div class="project-card">
+      <h3>Alcance</h3>
+      <p>
+        Prototipo funcional autónomo para pruebas controladas, sin despliegue en producción.
+        Incluye generación de contratos, análisis de cláusulas y resumen de documentos.
+      </p>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div class="project-card">
+      <h3>Resultados</h3>
+      <ul class="results-list">
+        <li>Generación automática de contratos en formato estructurado</li>
+        <li>Validación de cláusulas y detección de inconsistencias</li>
+        <li>Resumen automático de documentos jurídicos</li>
+        <li>Funciona en entornos locales sin depender de Internet</li>
+      </ul>
+    </div>
+
+    <!-- TECNOLOGÍAS -->
+    <div class="project-card">
+      <h3>Tecnologías</h3>
+      <ul class="tech-list">
+        <li>Backend: <strong>Laravel (PHP)</strong></li>
+        <li>IA: <strong>Python</strong> + Modelos LLM locales</li>
+        <li>Vector DB: <strong>Base de datos vectorial</strong> para búsqueda semántica</li>
+        <li>Orquestación: <strong>Ollama</strong></li>
+        <li>Entorno de pruebas: <strong>DevApp</strong></li>
+      </ul>
+    </div>
+
+    <!-- DOCUMENTACIÓN -->
+    <div class="project-card">
+      <h3>Documentación</h3>
+      <div class="doc-buttons">
+        <a href="docs/Reporte_finalResidencias_JesusAntonioDelAngelAguilar.pdf" target="_blank" class="btn">Ver PDF completo</a>
+        <a href="docs/Manual de Usuario.pdf" target="_blank" class="btn">Manual de usuario</a>
+      </div>
+
+      <div class="pdf-viewer">
+        <iframe src="docs/Reporte_finalResidencias_JesusAntonioDelAngelAguilar.pdf" frameborder="0"></iframe>
+      </div>
+    </div>
+
+  </div>
 </section>
 </main>
+
 <footer>© 2026 · Jesus Antonio Del Angel Aguilar</footer>
 </body>
 </html>

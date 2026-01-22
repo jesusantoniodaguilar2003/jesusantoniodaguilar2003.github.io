@@ -7,6 +7,7 @@
   <script src="js/main.js" defer></script>
 </head>
 <body>
+
 <main>
 <nav class="navbar">
   <div class="logo">JA</div>
@@ -15,7 +16,7 @@
     <li><a href="perfil.html">Perfil</a></li>
     <li><a href="habilidades.html">Habilidades</a></li>
     <li><a href="educacion.html">Educación</a></li>
-    <li><a href="experiencia.html">Experiencia</a></li>
+    <li><a href="experiencia.html" class="active">Experiencia</a></li>
     <li><a href="proyectos.html">Proyectos</a></li>
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
@@ -24,21 +25,76 @@
 <section class="container fade-in">
   <h2>Experiencia Profesional</h2>
 
-  <div class="card">
-    <h3>Proyecto IA – Rafiklex (Rafik)</h3>
-    <span>Residencias Profesionales</span>
+  <!-- ===== SERVICIO SOCIAL ===== -->
+  <div class="card experience-card">
+    <h3>Auxiliar del Centro de Cómputo General</h3>
+    <span class="experience-role">Servicio Social</span>
+    <span class="experience-date">
+      Instituto Tecnológico Superior de Pánuco 2024
+    </span>
+
+    <p>
+      Apoyo técnico y operativo en el Centro de Cómputo General del Instituto Tecnológico
+      Superior de Pánuco, participando en tareas de mantenimiento, administración de sistemas
+      y soporte a la infraestructura tecnológica institucional.
+    </p>
+
     <ul>
-      <li>Diseño de arquitectura de IA</li>
-      <li>Implementación de modelos LLM locales</li>
-      <li>Procesamiento de lenguaje natural jurídico</li>
-      <li>Pruebas en entorno Devapp</li>
-      <li>Documentación técnica</li>
+      <li>Mantenimiento preventivo y correctivo de equipos de cómputo</li>
+      <li>Instalación y configuración de software solicitado por áreas académicas y administrativas</li>
+      <li>Soporte técnico a usuarios (hardware, software e impresoras)</li>
+      <li>Administración y actualización de la página web institucional</li>
+      <li>Diseño, instalación y mantenimiento de redes de datos</li>
+      <li>Configuración de equipos de red y verificación de conectividad</li>
+    </ul>
+
+    <!-- ===== CARRUSEL DE EVIDENCIAS ===== -->
+    <div class="experience-carousel">
+      <button type="button" class="carousel-btn prev">&#10094;</button>
+
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="img/Mantenimiento1.jpeg" alt=""></div>
+        <div class="carousel-slide"><img src="img/Mantenimiento2.jpeg" alt=""></div>
+        <div class="carousel-slide"><img src="img/Ce1.jpeg" alt=""></div>
+        <div class="carousel-slide"><img src="img/Ce2.jpeg" alt=""></div>
+        <div class="carousel-slide"><img src="img/Ce3.jpeg" alt=""></div>
+        <div class="carousel-slide"><img src="img/Ce4.jpeg" alt=""></div>
+        <div class="carousel-slide"><img src="img/Re1.jpeg" alt=""></div>
+        <div class="carousel-slide"><img src="img/Re2.jpeg" alt=""></div>
+        <div class="carousel-slide"><img src="img/Re3.jpeg" alt=""></div>
+        <div class="carousel-slide"><img src="img/Re4.jpeg" alt=""></div>
+      </div>
+
+      <button type="button" class="carousel-btn next">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- ===== RESIDENCIAS PROFESIONALES ===== -->
+  <div class="card experience-card">
+    <h3>Proyecto de Inteligencia Artificial – Rafiklex (Rafik)</h3>
+    <span class="experience-role">Residencias Profesionales</span>
+    <span class="experience-date">2025</span>
+
+    <p>
+      Desarrollo de un sistema basado en inteligencia artificial enfocado al análisis
+      y generación asistida de documentos jurídicos dentro de una plataforma de gestión legal.
+    </p>
+
+    <ul>
+      <li>Diseño de la arquitectura general del sistema de IA</li>
+      <li>Implementación de modelos de lenguaje natural (PLN) ejecutados de forma local</li>
+      <li>Procesamiento y análisis de textos jurídicos</li>
+      <li>Integración del modelo en un entorno de pruebas (DevApp)</li>
+      <li>Elaboración de documentación técnica y funcional</li>
     </ul>
 
     <a href="proyecto-rafiklex.html" class="btn">Ver proyecto</a>
   </div>
+
 </section>
 </main>
+
 <footer>© 2026 · Jesus Antonio Del Angel Aguilar</footer>
+
 </body>
 </html>

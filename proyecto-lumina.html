@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lumina</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+<main>
+<nav class="navbar">
+  <div class="logo">JA</div>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="perfil.html">Perfil</a></li>
+    <li><a href="habilidades.html">Habilidades</a></li>
+    <li><a href="educacion.html">Educación</a></li>
+    <li><a href="experiencia.html">Experiencia</a></li>
+    <li><a href="proyectos.html" class="active">Proyectos</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+<section class="container fade-in">
+  <h2>Lumina</h2>
+<!-- LOGO -->
+  <div class="logo-project">
+    <img src="img/lumina.png" alt="Logo lumina">
+  </div>
+
+  <div class="project-grid">
+
+    <!-- DESCRIPCIÓN -->
+    <div class="project-card">
+      <h3>Descripción</h3>
+      <p>
+        Lumina es un modelo de inteligencia artificial orientado al apoyo educativo para estudiantes de
+        primaria, secundaria, preparatoria y universidad. El sistema está diseñado para funcionar sin
+        conexión a Internet, facilitando el acceso a información educativa en zonas rurales y contribuyendo
+        a reducir la brecha digital.
+      </p>
+
+      <h3>Reconocimiento</h3>
+      <p>
+        Segundo lugar en la etapa local del concurso INOVATEC 2025, modalidad Proyecto.
+      </p>
+    </div>
+
+    <!-- TECNOLOGÍAS -->
+    <div class="project-card">
+      <h3>Tecnologías utilizadas</h3>
+      <ul class="tech-list">
+        <li><strong>Python</strong> (Backend / Lógica principal)</li>
+        <li><strong>Ollama</strong> (Modelo LLM local)</li>
+        <li><strong>tkinter</strong> (Interfaz de escritorio)</li>
+        <li><strong>SpeechRecognition</strong> (Reconocimiento de voz)</li>
+        <li><strong>pyttsx3</strong> (Síntesis de voz)</li>
+        <li><strong>PIL</strong> (Manipulación de imágenes)</li>
+      </ul>
+
+      <h3>Fragmento del código</h3>
+      <pre class="code-snippet">
+import os
+import subprocess
+import threading
+import tkinter as tk
+from tkinter import scrolledtext
+from PIL import Image, ImageTk
+import ollama
+import pyttsx3
+import speech_recognition as sr
+import re
+      </pre>
+    </div>
+
+    <!-- INTERFAZ DESKTOP -->
+    <div class="project-card">
+      <h3>Versión Escritorio</h3>
+      <div class="project-image">
+        <img src="img/lumina-desktop.png" alt="Interfaz escritorio Lumina">
+      </div>
+      <p class="caption">
+        Interfaz desarrollada en Python con Tkinter.
+      </p>
+    </div>
+
+    <!-- INTERFAZ ANDROID -->
+    <div class="project-card">
+      <h3>Versión Android</h3>
+      <div class="project-image">
+        <img src="img/lumina-android.png" alt="Interfaz Android Lumina">
+      </div>
+      <p class="caption">
+        Versión móvil diseñada para funcionar sin conexión, ideal para zonas rurales.
+      </p>
+
+      <div class="doc-buttons">
+        <a href="docs/inovatec-2025-local.pdf" target="_blank" class="btn">Ver reconocimiento</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer>© 2026 · Jesus Antonio Del Angel Aguilar</footer>
+</body>
+</html>
